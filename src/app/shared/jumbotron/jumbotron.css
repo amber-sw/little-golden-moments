@@ -1,1 +1,6 @@
 @import '../../app.css';
+
+.navbar {
+    background: #AB7328;
+background: radial-gradient(rgba(171, 115, 40, 0.8) 0%, rgba(171, 115, 40, 0.4) 50%,rgba(171, 115, 40, 0) 80%);
+}

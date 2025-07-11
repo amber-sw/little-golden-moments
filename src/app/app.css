@@ -5,5 +5,8 @@
     --color-gold-lightest: #f8f0e1;
     --color-gold-light:#e6cfa3;
     --color-gold: #ab7328;
+    --color-gold-transparent: rgb(171, 115, 40, 0.75);
     --color-gold-dark: #885411;
+
+    --default-font-family: 'serif';
 }
