@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Jumbotron } from './shared/jumbotron/jumbotron';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Jumbotron],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
