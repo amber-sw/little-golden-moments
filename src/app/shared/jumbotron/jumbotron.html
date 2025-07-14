@@ -1,14 +1,12 @@
 <div class="bg-gold-light">
     <header class="absolute inset-x-0 top-0 z-50">
       <nav class="flex items-center justify-center p-6 lg:px-16" aria-label="Global">
-        <div class="flex lg:hidden">
-          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gold">
-            <span class="sr-only">Open main menu</span>
-            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          </button>
-        </div>
+        <button type="button" class="-m-2.5 w-full lg:hidden inline-flex items-end justify-end rounded-md p-2.5 text-gold" (click)="toggleMenu()">
+          <span class="sr-only">Open main menu</span>
+          <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
         <div class="hidden px-24 rounded-full lg:flex lg:gap-x-32 items-center navbar">
           <a href="over-mij" class="text-lg/6 font-semibold text-white">Over mij</a>
           <a href="aanbod" class="text-lg/6 font-semibold text-white">Aanbod</a>
@@ -20,7 +18,7 @@
 
 
       <!-- Mobile menu, show/hide based on menu open state. -->
-      <div class="lg:hidden" role="dialog" aria-modal="true">
+      <div class="lg:hidden" [hidden]="menuState"  role="dialog" aria-modal="true" id="mobile-navbar">
         <!-- Background backdrop, show/hide based on slide-over state. -->
         <div class="fixed inset-0 z-50"></div>
         <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gold-lightest p-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
@@ -29,7 +27,7 @@
               <span class="sr-only">Little Golden Moments</span>
               <img class="h-12 w-auto" src="/assets/logo-transparent-sbs.png" alt="Little Golden Moments" />
             </a>
-            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gold">
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gold cursor-pointer" (click)="toggleMenu()">
               <span class="sr-only">Close menu</span>
               <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -59,7 +57,7 @@
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div class="text-center">
-            <h1 class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">[ Slogan slogan slogan slogan slogan ]</h1>
+            <h1 class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">Warme fotografie met een gouden randje</h1>
           </div>
         </div>
       </div>
