@@ -28,8 +28,8 @@ export class Jumbotron {
       });
     } else {
       document.querySelectorAll('.navbar').forEach((c) => {
-        c.classList.remove('navbar-options-opaque');
         c.classList.add('navbar-options-transparent');
+        c.classList.remove('navbar-options-opaque');
       });
     }
 

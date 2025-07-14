@@ -1,10 +1,11 @@
 @import '../../app.css';
 
 .navbar-options-transparent {
-    background: #AB7328;
 background: radial-gradient(rgba(171, 115, 40, 0.8) 0%, rgba(171, 115, 40, 0.4) 50%,rgba(171, 115, 40, 0) 80%);
+transition: all 0.7s ease-out;
 }
 
 .navbar-options-opaque {
     background: #AB7328;
+    transition: all 0.7s ease-out;
 }
