@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Jumbotron } from './jumbotron';
+import { Header } from './header';
 
-describe('Jumbotron', () => {
-  let component: Jumbotron;
-  let fixture: ComponentFixture<Jumbotron>;
+describe('Header', () => {
+  let component: Header;
+  let fixture: ComponentFixture<Header>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Jumbotron]
+      imports: [Header]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Jumbotron);
+    fixture = TestBed.createComponent(Header);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

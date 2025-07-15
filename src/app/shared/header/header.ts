@@ -1,12 +1,12 @@
 import { Component, HostListener } from '@angular/core';
 
 @Component({
-  selector: 'jumbotron',
+  selector: 'app-header',
   imports: [],
-  templateUrl: './jumbotron.html',
-  styleUrl: './jumbotron.css'
+  templateUrl: './header.html',
+  styleUrl: './header.css'
 })
-export class Jumbotron {
+export class Header {
   public menuState = false;
 
   constructor(){};

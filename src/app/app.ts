@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Jumbotron } from './shared/jumbotron/jumbotron';
 import { Footer } from './footer/footer';
 import { CommonModule } from '@angular/common';
+import { Header } from './shared/header/header';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Jumbotron, Footer, CommonModule],
+  imports: [RouterOutlet, Footer, CommonModule, Header],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
