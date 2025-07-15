@@ -6,8 +6,8 @@
     INTRODUCTIEBLOK
     Dit is NIET de 'over-mij'-pagina. Ga daarvoor naar src/app/about-page/about-page.html
 -->
-<div class="w-full">
-    <div class="overflow-hidden bg-white py-16 sm:py-24 max-w-7xl px-6 lg:px-56 grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-auto mx-auto lg:max-w-3/4 xl:grid-cols-3 items-center">
+<div class="w-full bg-gold-lightest">
+    <div class="overflow-hidden py-16 sm:py-24 max-w-7xl px-6 lg:px-56 grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-auto mx-auto lg:max-w-3/4 xl:grid-cols-3 items-center">
         <div class="w-full max-w-3xl lg:pt-4 lg:pr-8 col-span-2">
             <p class="mt-2 text-4xl font-tangerine-regular tracking-tight text-pretty text-gray-900 sm:text-5xl">Hey, ik ben Amber!</p>
             <p class="mt-6 text-lg/8 text-gray-700">
@@ -31,9 +31,9 @@
         
         <!--
             ZELFPORTRET 
-            Als je deze wilt aanpassen, ga naar de public folder en vervolgens de assets folder. Vervang in deze assets folder de foto met de naam self-portrait.jpg
+            Als je deze wilt aanpassen, ga naar de public/assets folder. Vervang in deze assets folder de foto met de naam self-portrait.jpg
             !! BELANGRIJK !!
-            De naam en extensie moeten hetzelfde blijven, als deze toch dienen te wijzigen, verander het dan hieronder of vraag aan mij of Wannes om dit te doen
+            De naam en extensie (self-portrait.jpg) moeten hetzelfde blijven, als deze toch dienen te wijzigen, verander het dan hieronder of vraag aan mij of Wannes om dit te doen
         -->
         <img src="/assets/self-portrait.jpg" alt="Self portrait" class="max-w-sm rounded-t-full shadow-xl justify-self-end self-center  w-full md:-ml-4 lg:-ml-0" />
     </div>
@@ -46,21 +46,24 @@
     Foto's of tekst aanpassen? Ga naar src/app/home-page/home-page.ts
 -->
 <div class="w-full bg-gold-light">
-    <div class="overflow-hidden mx-auto py-16 sm:py-24 max-w-9xl px-6 lg:px-56  items-center">
+    <div class="overflow-hidden mx-auto pt-16 sm:pt-24 max-w-9xl px-6 lg:px-56  items-center">
         <p class="my-2 text-center text-4xl font-tangerine-regular tracking-tight text-pretty text-gray-900 sm:text-5xl">Mijn aanbod</p>
 
-        <div class="grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-auto lg:grid-cols-2">
-            <img [src]="services[selectedService].src" alt="Self portrait" class="max-w-sm rounded-lg shadow-xl justify-self-end self-center  w-full md:-ml-4 lg:-ml-0" />
+        <div class="grid grid-cols-1 gap-x-8 lg:mx-auto lg:grid-cols-2 lg:pt-8">
+            <img [src]="services[selectedService].src" alt="Self portrait" class="max-w-lg rounded-lg shadow-xl max-h-2/3 object-cover justify-self-center w-full" />
             
-            <div class="w-full max-w-3xl lg:pt-4 lg:pr-8 col-span-1 ">
-                <nav class="-mb-px flex space-x-8">
+            <div class="w-full max-w-3xl lg:pt-16 lg:pr-8 col-span-1 ">
+                <nav class="-mb-px flex space-x-8 text-lg">
                     @for(service of services; track service.id) {
-                        <a (click)="changeSelection(service.id)" class="cursor-pointer group flex gap-x-3 rounded-md p-2 pl-3 text-sm/6 font-semibold hover:text-gold transition-all duration-75 ease-in" [class]="{'text-gold': service.id == selectedService, 'text-gray-700': service.id != selectedService}" >{{service.name}}</a>
+                        <a (click)="changeSelection(service.id)" class="cursor-pointer group flex gap-x-3 rounded-md p-2 pl-3 font-semibold hover:text-gold transition-all duration-75 ease-in" [class]="{'text-gold': service.id == selectedService, 'text-gray-700': service.id != selectedService}" >{{service.name}}</a>
                     }
                 </nav>
                 
                 <p class="mt-6 text-lg/8 text-gray-700 pl-3">
                     {{services[selectedService].description}}
+                </p>
+                <p class="mt-6 text-lg/8 semi-bold text-gray-700 pl-3">
+                    Prijs: {{services[selectedService].price}}
                 </p>
                 <a type="button" href="/aanbod" class="cursor-pointer inline-flex items-center gap-x-1.5 rounded-md bg-gold mt-6 ml-2 px-2.5 py-1.5 text-sm text-gold-lightest shadow-xs hover:bg-gold-dark transition-all duration-75 ease-in">
                     Ontdek meer
@@ -71,3 +74,23 @@
     </div>
 </div>
 <!--EINDE Aanbodblok-->
+
+<!--
+    CONTACTBLOK
+    Als je de achtergrondfoto wilt aanpassen, ga naar de public/assets folder. Vervang in deze folder de foto met de naam contact-home-background.jpg
+    !! BELANGRIJK !!
+    De naam en extensie (contact-home-background.jpg) moeten hetzelfde blijven, als deze toch dienen te wijzigen, verander het dan hieronder of vraag aan mij of Wannes om dit te doen
+-->
+<div class="relative isolate overflow-hidden py-14 bg-[url(/assets/contact-home-background.jpg)] bg-fixed bg-top bg-cover">
+    <div class="flex flex-col mx-auto max-w-7xl px-6 lg:px-8">
+        <p class="my-2 text-center text-4xl font-tangerine-regular tracking-tight text-pretty text-white sm:text-6xl">Let's talk</p>
+        <p class="m-6 lg:text-xl text-white text-center">Neem vrijblijvend contact op voor meer informatie of om een afspraak te maken.</p>
+        <a href="mailto:littlegoldenmoments0@gmail.com?SUBJECT=Extra Informatie" class="bg-gold-light inline-block p-4 rounded-full mx-auto">
+            <span class="sr-only">Email</span>
+            <svg class="h-7 w-6 text-gold-dark" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+            </svg>
+        </a>
+    </div>
+</div>
+<!--EINDE Contactblok-->
