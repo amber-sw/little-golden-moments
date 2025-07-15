@@ -20,7 +20,7 @@ export class Header {
   onWindowScroll() {
 
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (number > 150) {
+    if (number > 100) {
       document.querySelectorAll('.navbar').forEach((c) => {
         c.classList.add('navbar-options-opaque');
         c.classList.remove('navbar-options-transparent');
