@@ -63,11 +63,11 @@
     <div class="overflow-hidden mx-auto pt-16 sm:pt-24 max-w-9xl px-6 lg:px-56  items-center">
         <p class="my-2 text-center text-4xl font-tangerine-regular tracking-tight text-pretty text-gray-900 sm:text-5xl">Mijn aanbod</p>
 
-        <div class="grid grid-cols-1 gap-x-8 lg:mx-auto lg:grid-cols-2 lg:pt-8">
+        <div class="md:grid w-full grid-cols-1 gap-x-8 lg:mx-auto lg:grid-cols-2 lg:pt-8">
             <img [src]="services[selectedService].src" alt="Self portrait" class="max-w-lg rounded-lg shadow-xl max-h-2/3 object-cover justify-self-center w-full" />
             
-            <div class="w-full max-w-3xl lg:pt-16 lg:pr-8 col-span-1 ">
-                <nav class="-mb-px flex space-x-8 text-lg">
+            <div class="w-full max-w-3xl mt-8 lg:mt-0 lg:pt-16 lg:pr-8 col-span-1 ">
+                <nav class="-mb-px flex flex-wrap space-x-8 text-lg">
                     @for(service of services; track service.id) {
                         <a (click)="changeSelection(service.id)" class="cursor-pointer group flex gap-x-3 rounded-md p-2 pl-3 font-semibold hover:text-gold transition-all duration-75 ease-in" [class]="{'text-gold': service.id == selectedService, 'text-gray-700': service.id != selectedService}" >{{service.name}}</a>
                     }
@@ -79,7 +79,7 @@
                 <p class="mt-6 text-lg/8 semi-bold text-gray-700 pl-3">
                     Prijs: {{services[selectedService].price}}
                 </p>
-                <a type="button" href="/aanbod" class="cursor-pointer inline-flex items-center gap-x-1.5 rounded-md bg-gold mt-6 ml-2 px-2.5 py-1.5 text-sm text-gold-lightest shadow-xs hover:bg-gold-dark transition-all duration-75 ease-in">
+                <a type="button" href="/aanbod" class="cursor-pointer inline-flex items-center gap-x-1.5 rounded-md bg-gold my-6 ml-2 px-2.5 py-1.5 text-sm text-gold-lightest shadow-xs hover:bg-gold-dark transition-all duration-75 ease-in">
                     Ontdek meer
                     <span aria-hidden="true">→</span>
                 </a>

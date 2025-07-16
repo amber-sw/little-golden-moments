@@ -13,7 +13,7 @@ export class PortfolioPage {
   private _subscription: Subscription;
 
   constructor(private _lightbox: Lightbox, private _lightboxEvent: LightboxEvent) {
-    for (let i = 1; i <= 4; i++) {
+    for (let i = 1; i <= 15; i++) {
       const src = '/assets/portfolio/image-' + i + '.jpg';
       console.log(src);
       const caption = 'Image ' + i + ' caption here';
