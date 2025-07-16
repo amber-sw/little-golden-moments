@@ -22,7 +22,6 @@
               }
             ],
             "styles": [
-              "./node_modules/ngx-lightbox/lightbox.css",
               "src/styles.css"
             ],
             "server": "src/main.server.ts",
@@ -81,7 +80,6 @@
               }
             ],
             "styles": [
-              "./node_modules/ngx-lightbox/lightbox.css",
               "src/styles.css"
             ]
           }
