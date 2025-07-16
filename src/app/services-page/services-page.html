@@ -11,18 +11,18 @@
 @for (service of services; track $index) {
     @if ($index%2==0) {
         <div class="bg-gold-light w-full z-100 pb-16">
-            <div class="py-16 sm:py-24 max-w-7xl px-6 lg:px-56 grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-auto mx-auto lg:max-w-3/4 xl:grid-cols-3">
+            <div class="py-16 sm:py-24 max-w-7xl px-6 xl:px-56 xl:grid gap-x-8 gap-y-16 sm:gap-y-20 mx-auto xl:max-w-3/4 xl:grid-cols-5 w-full">
                 <!--
                     VOORBEELDFOTO's 
                     Als je deze wilt aanpassen, ga naar de public/assets folder. Vervang in deze assets folder de foto's met de naam [pakketnaam]-example-1.jpg en [pakketnaam]-example-2.jpg (vb. newborn-example-1.jpg)
                     !! BELANGRIJK !!
                     De naam en extensie moeten hetzelfde blijven, als deze toch dienen te wijzigen, verander het dan hieronder of vraag aan mij of Wannes om dit te doen
                 -->
-                <div class="relative">
-                    <img [src]="service.src1" alt="Self portrait" class="lg:absolute inline-block -top-40 -left-30 max-w-sm rounded-lg shadow-xl justify-self-end self-center z-2 lg:w-3xs md:-ml-4 lg:-ml-0 w-full " />
-                    <img [src]="service.src2" alt="Self portrait" class="lg:absolute inline-block top-5 left-10 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-1  lg:w-3xs md:-ml-4 lg:-ml-0 w-full mt-8" />
+                <div class="xl:relative flex flex-wrap col-span-2 justify-center">
+                    <img [src]="service.src1" alt="Self portrait" class="xl:absolute inline-block top-1/10 right-1/2 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-2 lg:w-3xs lg:-ml-0 w-full mx-4 my-4" />
+                    <img [src]="service.src2" alt="Self portrait" class="xl:absolute inline-block -top-1/2 right-0 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-1  lg:w-3xs lg:-ml-0 w-full xl:mt-8 mx-4 my-4" />
                 </div>
-                <div class="w-full max-w-3xl lg:pt-4 lg:pr-8 col-span-2">
+                <div class="w-full lg:pt-4 lg:pr-8 col-span-3 text-right p-16">
                     <p class="mt-2 text-4xl font-tangerine-bold tracking-tight text-pretty text-gray-900 sm:text-5xl">{{service.name}}</p>
                     <p class="mt-6 text-lg/8 text-gray-700">
                         <!--
@@ -45,9 +45,9 @@
         </div>
     }
     @else {
-        <div class="bg-gold-lightest w-full z-100 py-16">
-            <div class="py-16 sm:py-24 max-w-7xl px-6 lg:px-56 grid grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-auto mx-auto lg:max-w-3/4 xl:grid-cols-3">
-                <div class="w-full max-w-3xl lg:pt-4 lg:pr-8 col-span-2">
+        <div class="bg-gold-lightest w-full z-100">
+            <div class="py-16 sm:py-16 max-w-7xl px-6 xl:px-56 xl:grid gap-x-8 gap-y-16 sm:gap-y-20 mx-auto xl:max-w-3/4 xl:grid-cols-5 w-full">
+                <div class="w-full lg:pt-4 lg:pr-8 col-span-3 p-16 pt-4">
                     <p class="mt-2 text-4xl font-tangerine-bold tracking-tight text-pretty text-gray-900 sm:text-5xl">{{service.name}}</p>
                     <p class="mt-6 text-lg/8 text-gray-700">
                         <!--
@@ -71,9 +71,9 @@
                     !! BELANGRIJK !!
                     De naam en extensie moeten hetzelfde blijven, als deze toch dienen te wijzigen, verander het dan hieronder of vraag aan mij of Wannes om dit te doen
                 -->
-                <div class="relative">
-                    <img [src]="service.src1" alt="Self portrait" class="lg:absolute inline-block -top-30 -right-30 max-w-sm rounded-lg shadow-xl justify-self-end self-center z-2 lg:w-3xs md:-ml-4 lg:-ml-0 w-full " />
-                    <img [src]="service.src2" alt="Self portrait" class="lg:absolute inline-block top-5 -left-10 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-1  lg:w-3xs md:-ml-4 lg:-ml-0 w-full mt-8" />
+                <div class="xl:relative flex flex-wrap col-span-2 justify-center">
+                    <img [src]="service.src1" alt="Self portrait" class="xl:absolute inline-block top-1/10 left-1/2 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-2 lg:w-3xs lg:-ml-0 w-full mx-4 my-4" />
+                    <img [src]="service.src2" alt="Self portrait" class="xl:absolute inline-block -top-1/2 left-0 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-1  lg:w-3xs lg:-ml-0 w-full xl:mt-8 mx-4 my-4" />
                 </div>
             </div>
         </div>
