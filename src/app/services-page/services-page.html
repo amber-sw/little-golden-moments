@@ -4,7 +4,7 @@
 <div class="w-full bg-gold-lightest">
     <div class="overflow-hidden py-16 lg:px-56 w-full">
         <div class="w-full  lg:pt-4 lg:pr-8">
-            <p class="mt-2 text-4xl text-center font-tangerine-bold tracking-tight text-pretty text-gray-900 sm:text-5xl">Mijn aanbod</p>
+            <p class="my-2 text-center text-2xl  tracking-tight text-pretty text-gray-900 sm:text-2xl">MIJN AANBOD</p>
         </div>
     </div>
 </div>
@@ -23,7 +23,7 @@
                     <img [src]="service.src2" alt="Self portrait" class="xl:absolute inline-block -top-1/2 right-0 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-1  lg:w-3xs lg:-ml-0 w-full xl:mt-8 mx-4 my-4" />
                 </div>
                 <div class="w-full lg:pt-4 lg:pr-8 col-span-3 text-right p-16">
-                    <p class="mt-2 text-4xl font-tangerine-bold tracking-tight text-pretty text-gray-900 sm:text-5xl">{{service.name}}</p>
+                    <p class="mt-2 text-2xl  tracking-tight text-pretty text-gray-900 uppercase">{{service.name}}</p>
                     <p class="mt-6 text-lg/8 text-gray-700">
                         <!--
                             BESCHRIJVING
@@ -48,7 +48,7 @@
         <div class="bg-gold-lightest w-full z-100">
             <div class="py-16 sm:py-16 max-w-7xl px-6 xl:px-56 xl:grid gap-x-8 gap-y-16 sm:gap-y-20 mx-auto xl:max-w-3/4 xl:grid-cols-5 w-full">
                 <div class="w-full lg:pt-4 lg:pr-8 col-span-3 p-16 pt-4">
-                    <p class="mt-2 text-4xl font-tangerine-bold tracking-tight text-pretty text-gray-900 sm:text-5xl">{{service.name}}</p>
+                    <p class="mt-2 text-2xl  tracking-tight text-pretty text-gray-900 uppercase">{{service.name}}</p>
                     <p class="mt-6 text-lg/8 text-gray-700">
                         <!--
                             BESCHRIJVING
@@ -79,16 +79,4 @@
         </div>
     }
 }
-
-    <div class="relative isolate overflow-hidden py-14 bg-[url(/assets/contact-home-background.jpg)] bg-fixed bg-top bg-cover">
-        <div class="flex flex-col mx-auto max-w-7xl px-6 lg:px-8">
-            <p class="my-2 text-center text-4xl font-tangerine-regular tracking-tight text-pretty text-white sm:text-6xl">Let's talk</p>
-            <p class="m-6 lg:text-xl text-white text-center">Neem vrijblijvend contact op voor meer informatie of om een afspraak te maken.</p>
-            <a href="mailto:littlegoldenmoments0@gmail.com?SUBJECT=Extra Informatie" class="bg-gold-light inline-block p-4 rounded-full mx-auto">
-                <span class="sr-only">Email</span>
-                <svg class="h-7 w-6 text-gold-dark" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-                </svg>
-            </a>
-        </div>
-    </div>
+<contact-block/>

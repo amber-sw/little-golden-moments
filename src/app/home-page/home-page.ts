@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ContactBlock } from '../shared/contact-block/contact-block';
 
 @Component({
   selector: 'app-home-page',
-  imports: [],
+  imports: [ContactBlock],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css'
 })
