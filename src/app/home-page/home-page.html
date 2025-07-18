@@ -27,16 +27,9 @@
                     EERSTE PARAGRAAF INTRODUCTIE TEKST OP HOME PAGINA.
                     De onderstaande tekst mag je vrij aanpassen.
                 -->
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
-                <!--EINDE-->
-            </p>
-            <p class="mt-6 text-lg/8 text-gray-700">
-                <!--
-                    TWEEDE PARAGRAAF INTRODUCTIE TEKST OP HOME PAGINA.
-                    De onderstaande tekst mag je vrij aanpassen. Als je geen tweede paragraaf wilt mag je dit leeg laten.
-                -->
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+                Ik ben Amber, {{age}} jaar, fotograaf met een liefde voor het vastleggen van échte momenten. Of het nu gaat om een zwangerschap, newborn, koppel of gezin 
+                – ik geloof dat de mooiste beelden ontstaan wanneer je jezelf kunt zijn. Met een rustige aanpak en oog voor detail creëer ik foto’s die puur en tijdloos zijn. 
+                Als mama weet ik hoe waardevol het is om herinneringen tastbaar te maken. Mijn doel? Dat jij met een glimlach en warm gevoel naar jouw foto’s kijkt – nu én later.
                 <!--EINDE-->
             </p>
         </div>
@@ -61,10 +54,10 @@
     <div class="overflow-hidden mx-auto pt-16 sm:pt-24 max-w-9xl px-6 lg:px-56  items-center">
         <p class="my-2 text-center text-2xl  tracking-tight text-pretty text-gray-900">MIJN AANBOD</p>
 
-        <div class="md:grid w-full grid-cols-1 gap-x-8 lg:mx-auto lg:grid-cols-2 lg:pt-8">
+        <div class="md:grid w-full grid-cols-1 gap-x-8 lg:mx-auto lg:grid-cols-2 lg:pt-8 items-center">
             <img [src]="services[selectedService].src" alt="Self portrait" class="max-w-lg rounded-lg shadow-xl max-h-2/3 object-cover justify-self-center w-full" />
             
-            <div class="w-full max-w-3xl mt-8 lg:mt-0 lg:pt-16 lg:pr-8 col-span-1 ">
+            <div class="w-full max-w-3xl lg:mt-0 lg:pr-8 col-span-1 ">
                 <nav class="-mb-px flex flex-wrap space-x-8 text-lg">
                     @for(service of services; track service.id) {
                         <a (click)="changeSelection(service.id)" class="cursor-pointer group flex gap-x-3 rounded-md p-2 pl-3 font-semibold hover:text-gold transition-all duration-75 ease-in" [class]="{'text-gold': service.id == selectedService, 'text-gray-700': service.id != selectedService}" >{{service.name}}</a>
@@ -72,12 +65,12 @@
                 </nav>
                 
                 <p class="mt-6 text-lg/8 text-gray-700 pl-3">
-                    {{services[selectedService].description}}
+                    <span [innerHTML]="services[selectedService].description"></span>
                 </p>
                 <p class="mt-6 text-lg/8 semi-bold text-gray-700 pl-3">
                     Prijs: {{services[selectedService].price}}
                 </p>
-                <a type="button" href="/aanbod" class="cursor-pointer inline-flex items-center gap-x-1.5 rounded-md bg-gold my-6 ml-2 px-2.5 py-1.5 text-sm text-gold-lightest shadow-xs hover:bg-gold-dark transition-all duration-75 ease-in">
+                <a type="button" href="/aanbod?id={{selectedService}}" class="cursor-pointer inline-flex items-center gap-x-1.5 rounded-md bg-gold my-6 ml-2 px-2.5 py-1.5 text-sm text-gold-lightest shadow-xs hover:bg-gold-dark transition-all duration-75 ease-in">
                     Ontdek meer
                     <span aria-hidden="true">→</span>
                 </a>
