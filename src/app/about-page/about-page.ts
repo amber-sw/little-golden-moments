@@ -9,4 +9,9 @@ import { ContactBlock } from '../shared/contact-block/contact-block';
 })
 export class AboutPage {
 
+  public age:number;
+  constructor(){
+    const timediff = (Math.abs(Date.now() - new Date('1999-04-19').getTime()));
+    this.age = Math.floor((timediff / (1000*3600*24))/365.25);
+  }
 }

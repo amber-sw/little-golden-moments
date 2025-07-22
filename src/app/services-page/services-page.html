@@ -10,7 +10,7 @@
 </div>
 @for (service of services; track $index) {
     @if ($index%2==0) {
-        <div class="bg-gold-light w-full z-100 pb-16">
+        <div id="aanbod-{{$index}}" class="bg-gold-light w-full z-100">
             <div class="py-16 sm:py-24 max-w-7xl px-6 xl:px-56 xl:grid gap-x-8 gap-y-16 sm:gap-y-20 mx-auto xl:max-w-3/4 xl:grid-cols-5 w-full">
                 <!--
                     VOORBEELDFOTO's 
@@ -19,8 +19,8 @@
                     De naam en extensie moeten hetzelfde blijven, als deze toch dienen te wijzigen, verander het dan hieronder of vraag aan mij of Wannes om dit te doen
                 -->
                 <div class="xl:relative flex flex-wrap col-span-2 justify-center">
-                    <img [src]="service.src1" alt="Self portrait" class="xl:absolute inline-block top-1/10 right-1/2 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-2 lg:w-3xs lg:-ml-0 w-full mx-4 my-4" />
-                    <img [src]="service.src2" alt="Self portrait" class="xl:absolute inline-block -top-1/2 right-0 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-1  lg:w-3xs lg:-ml-0 w-full xl:mt-8 mx-4 my-4" />
+                    <img [src]="service.src1" alt="Self portrait" class="xl:absolute inline-block top-1/3 right-1/2 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-2 lg:w-xs lg:-ml-0 w-full mx-4 my-4" />
+                    <img [src]="service.src2" alt="Self portrait" class="xl:absolute inline-block -top-1/6 right-0 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-1  lg:w-xs lg:-ml-0 w-full xl:mt-8 mx-4 my-4" />
                 </div>
                 <div class="w-full lg:pt-4 lg:pr-8 col-span-3 text-right p-16">
                     <p class="mt-2 text-2xl  tracking-tight text-pretty text-gray-900 uppercase">{{service.name}}</p>
@@ -29,8 +29,16 @@
                             BESCHRIJVING
                             De beschrijving pas je aan in de file src/app/services-page/services-page.ts
                         -->
-                        {{service.description}}
+                        <span [innerHTML]="service.description"></span>
                     </p>
+                    <div class="mt-6 text-lg/8 text-gray-700">
+                        <span class="font-semibold">Inbegrepen</span>
+                        <ul>
+                            @for (item of service.included; track $index) {
+                                <li>{{item}}</li>
+                            }
+                        </ul>
+                    </div>
                     <p class="mt-6 text-lg/8 font-semibold text-gray-700">
                         <!--
                             PRIJS 
@@ -45,7 +53,7 @@
         </div>
     }
     @else {
-        <div class="bg-gold-lightest w-full z-100">
+        <div id="aanbod-{{$index}}" class="bg-gold-lightest w-full z-100">
             <div class="py-16 sm:py-16 max-w-7xl px-6 xl:px-56 xl:grid gap-x-8 gap-y-16 sm:gap-y-20 mx-auto xl:max-w-3/4 xl:grid-cols-5 w-full">
                 <div class="w-full lg:pt-4 lg:pr-8 col-span-3 p-16 pt-4">
                     <p class="mt-2 text-2xl  tracking-tight text-pretty text-gray-900 uppercase">{{service.name}}</p>
@@ -54,8 +62,16 @@
                             BESCHRIJVING
                             De beschrijving pas je aan in de file src/app/services-page/services-page.ts
                         -->
-                        {{service.description}}
+                        <span [innerHTML]="service.description"></span>
                     </p>
+                    <div class="mt-6 text-lg/8 text-gray-700">
+                        <span class="font-semibold">Inbegrepen</span>
+                        <ul>
+                            @for (item of service.included; track $index) {
+                                <li>{{item}}</li>
+                            }
+                        </ul>
+                    </div>
                     <p class="mt-6 text-lg/8 font-semibold text-gray-700">
                         <!--
                             PRIJS 
@@ -72,8 +88,8 @@
                     De naam en extensie moeten hetzelfde blijven, als deze toch dienen te wijzigen, verander het dan hieronder of vraag aan mij of Wannes om dit te doen
                 -->
                 <div class="xl:relative flex flex-wrap col-span-2 justify-center">
-                    <img [src]="service.src1" alt="Self portrait" class="xl:absolute inline-block top-1/10 left-2/3 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-2 lg:w-3xs lg:-ml-0 w-full mx-4 my-4" />
-                    <img [src]="service.src2" alt="Self portrait" class="xl:absolute inline-block -top-1/2 left-0 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-1  lg:w-3xs lg:-ml-0 w-full xl:mt-8 mx-4 my-4" />
+                    <img [src]="service.src1" alt="Self portrait" class="xl:absolute inline-block top-1/3 left-2/3 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-2 lg:w-xs lg:-ml-0 w-full mx-4 my-4" />
+                    <img [src]="service.src2" alt="Self portrait" class="xl:absolute inline-block -top-1/6 left-0 max-w-xs rounded-lg shadow-xl justify-self-end self-center z-1  lg:w-xs lg:-ml-0 w-full xl:mt-8 mx-4 my-4" />
                 </div>
             </div>
         </div>
