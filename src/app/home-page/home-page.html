@@ -54,11 +54,11 @@
     <div class="overflow-hidden mx-auto pt-16 sm:pt-24 max-w-9xl px-6 lg:px-56  items-center">
         <p class="my-2 text-center text-2xl  tracking-tight text-pretty text-gray-900">MIJN AANBOD</p>
 
-        <div class="md:grid w-full grid-cols-1 gap-x-8 lg:mx-auto lg:grid-cols-2 lg:pt-8 items-center">
+        <div class="md:grid w-full grid-cols-1 gap-x-8 lg:mx-auto lg:grid-cols-2 lg:pt-8 items-start">
             <img [src]="services[selectedService].src" alt="Self portrait" class="max-w-lg rounded-lg shadow-xl max-h-2/3 object-cover justify-self-center w-full" />
             
             <div class="w-full max-w-3xl lg:mt-0 lg:pr-8 col-span-1 ">
-                <nav class="-mb-px flex flex-wrap space-x-8 text-lg">
+                <nav class="-mb-px grid grid-cols-2 space-x-8 text-lg justify-evenly">
                     @for(service of services; track service.id) {
                         <a (click)="changeSelection(service.id)" class="cursor-pointer group flex gap-x-3 rounded-md p-2 pl-3 font-semibold hover:text-gold transition-all duration-75 ease-in" [class]="{'text-gold': service.id == selectedService, 'text-gray-700': service.id != selectedService}" >{{service.name}}</a>
                     }
