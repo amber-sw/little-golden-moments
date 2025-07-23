@@ -11,7 +11,8 @@ export class PortfolioPage {
   public _album:Array<any> = [];
 
   constructor() {
-    for (let i = 1; i <= 15; i++) {
+    // Verander hier het tweede getal in het aantal foto's dat je in je portfolio hebt staan
+    for (let i = 1; i <= 22; i++) {
       const src = '/assets/portfolio/image-' + i + '.jpg';
       const thumb = '/assets/portfolio/image-' + i + '.jpg';
       const album = {
