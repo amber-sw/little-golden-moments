@@ -12,7 +12,7 @@ export class PortfolioPage {
 
   constructor() {
     // Verander hier het tweede getal in het aantal foto's dat je in je portfolio hebt staan
-    for (let i = 1; i <= 22; i++) {
+    for (let i = 0; i <= 31; i++) {
       const src = '/assets/portfolio/image-' + i + '.jpg';
       const thumb = '/assets/portfolio/image-' + i + '.jpg';
       const album = {
